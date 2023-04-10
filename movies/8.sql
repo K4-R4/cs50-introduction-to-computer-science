@@ -1,0 +1,2 @@
+SELECT name FROM people WHERE id IN (SELECT stars.person_id FROM movies JOIN stars ON movies.id = stars.movie_id WHERE movies.title = "Toy Story")
+                            OR id IN (SELECT directors.person_id FROM movies JOIN directors ON movies.id = directors.movie_id WHERE movies.title = "Toy Story");

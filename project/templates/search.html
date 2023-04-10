@@ -1,0 +1,14 @@
+{% extends "layout-form.html" %}
+
+{% block title %}
+    : Search
+{% endblock %}
+
+{% block starting %}
+    <form action="/search" method="post">
+{% endblock %}
+
+{% block closing %}
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+{% endblock %}

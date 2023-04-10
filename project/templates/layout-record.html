@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table id="record" class="table table-striped table-bordered table-hover">
+        <thead>
+            <th id="title" scope="col">Title</td>
+            <th id="author" scope="col">Author</td>
+            <th id="year" class="year" scope="col">Year</td>
+            <th id="rating" class="rating" scope="col">Rating</td>
+            <th id="note" scope="col">Note</td>
+            <th id="edit" class="edit" scope="col"></td>
+            <th id="delete" class="delete" scope="col"></td>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row.title }}</td>
+                    <td>{{ row.author }}</td>
+                    <td class="year">{{ row.year }}</td>
+                    <td class="rating">{{ row.rating }}</td>
+                    <td>{{ row.note }}</td>
+                    <td class="edit"><a href="/edit?id={{ row.id }}"><button class="btn btn-primary">Edit</button></a></td>
+                    <td class="delete"><a href="/delete?id={{ row.id }}"><button class="btn btn-danger">Delete</button></a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

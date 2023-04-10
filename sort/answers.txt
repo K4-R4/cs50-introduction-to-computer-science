@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: ソートされたデータに対して、逆にソートされたデータやソートされてないデータよりも格段に短い時間を要したため。
+
+sort2 uses: Merge Sort
+
+How do you know?: ソート、逆ソート、ソートなしのデータに対して同程度の時間で、データの個数による処理時間の変動が少なかったため。
+
+sort3 uses: Selection Sort
+
+How do you know?: ソート、逆ソート、ソートなしのデータに対して同程度の時間を要したが、データの個数によって時間が大幅に変動したため。

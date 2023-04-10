@@ -1,0 +1,14 @@
+{% extends "layout-form.html" %}
+
+{% block title %}
+    : Add
+{% endblock %}
+
+{% block starting %}
+    <form action="/add" method="post">
+{% endblock %}
+
+{% block closing %}
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

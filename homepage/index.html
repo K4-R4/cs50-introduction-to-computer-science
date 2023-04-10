@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name="niewpoint" content="initial-scale=1, width=device-width">
+        <title>My Webpage</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback').innerHTML = '筆者と同じです!';
+                })
+                let incorrects = document.querySelectorAll('.incorrect');
+                for(let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback').innerHTML = '筆者とは気が合わなそうです...';
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <b>私の好きなジブリアニメ</b>
+        </header>
+        <main>
+            <p>
+                このページでは私の好きなジブリアニメを３つ紹介します。<br>
+                画像をクリックすることでそれぞれを詳細に紹介しているページにとべます。
+            </p>
+            <p>
+                ひとつめは「千と千尋の神隠し」です。<br>
+                ある少女が神様たちの訪れる街に迷い込むお話です。<br>
+                <a href="spirited-away.html"><img src="/pictures/chihiro.jpg" class="rounded" alt="千と千尋の神隠し"></a>
+            </p>
+            <p>
+                ふたつめは「となりのトトロ」です。<br>
+                子どもたちと不思議な生き物の出会いが描かれています。<br>
+                <a href="my-neighbor-totoro.html"><img src="/pictures/totoro.jpg" class="rounded" alt="となりのトトロ" ></a>
+            </p>
+            <p>
+                最後は「平成狸合戦ぽんぽこ」です。<br>
+                再開発が進められるなか、狸たちが抵抗しようとします。<br>
+                <a href="pom-poco.html"><img src="/pictures/tanuki.jpg" class="rounded" alt="平成狸合戦ぽんぽこ"></a>
+            </p>
+            <p>
+                あなたが一番好き、もしくは興味を持っているのは？<br>
+                <button class="correct">千と千尋の神隠し</button>
+                <button class="incorrect">となりのトトロ</button>
+                <button class="incorrect">平成狸合戦ぽんぽこ</button>
+            </p>
+            <div id="feedback"></div>
+        </main>
+        <footer>
+            &copy; All rights reserved by example
+        </footer>
+    </body>
+</html>

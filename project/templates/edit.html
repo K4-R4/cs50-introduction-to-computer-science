@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Edit
+{% endblock %}
+
+{% block main %}
+    <form action="/edit?id={{ row.id }}" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-25" id="title" name="title" placeholder="Title" value={{ row.title }} type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-25" id="author" name="author" placeholder="Author" value={{ row.author }} type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-25" id="year" name="year" placeholder="Year" value={{ row.year }} type="number">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-25" id="rating" name="rating" placeholder="Rating (1 - 10)" value={{ row.rating }} type="number" min="1" max="10">
+        </div>
+        <div class="mb-3">
+            <textarea autocomplete="off" autofocus class="form-control mx-auto w-25" id="note" name="note" placeholder="Note (Max 100 letters)" maxlength="100">{{ row.note }}</textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Edit</button>
+    </form>
+{% endblock %}
